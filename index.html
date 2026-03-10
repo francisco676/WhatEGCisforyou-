@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Which Employee Content Play Is Right for Your Company? | RallyUp</title>
+<meta name="description" content="A 3-minute framework for B2B teams who want LinkedIn to actually drive business results.">
+<style>
+  :root {
+    --bg: #09090b;
+    --surface: #18181b;
+    --border: #3f3f46;
+    --text: #fafafa;
+    --text2: #a1a1aa;
+    --accent: #5B6FFF;
+    --lime: #D8EC6A;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  a { color: var(--lime); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  /* NAV */
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(9,9,11,0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    padding: 0 24px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .logo {
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: -0.02em;
+    color: var(--text);
+  }
+
+  .logo span { color: var(--lime); }
+
+  .nav-cta {
+    background: var(--lime);
+    color: #09090b;
+    font-weight: 600;
+    font-size: 13px;
+    padding: 8px 16px;
+    border-radius: 6px;
+    white-space: nowrap;
+  }
+
+  .nav-cta:hover { background: #c8dc5a; text-decoration: none; }
+
+  /* HERO */
+  .hero {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 72px 24px 56px;
+    text-align: center;
+  }
+
+  .hero-badge {
+    display: inline-block;
+    background: rgba(216,236,106,0.12);
+    border: 1px solid rgba(216,236,106,0.3);
+    color: var(--lime);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 5px 14px;
+    border-radius: 100px;
+    margin-bottom: 24px;
+  }
+
+  .hero h1 {
+    font-size: clamp(28px, 5vw, 46px);
+    font-weight: 700;
+    line-height: 1.15;
+    letter-spacing: -0.03em;
+    margin-bottom: 20px;
+  }
+
+  .hero h1 span { color: var(--lime); }
+
+  .hero-sub {
+    font-size: 18px;
+    color: var(--text2);
+    max-width: 520px;
+    margin: 0 auto 40px;
+    line-height: 1.65;
+  }
+
+  .read-time {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    color: var(--text2);
+    background: var(--surface);
+    border: 1px solid var(--border);
+    padding: 6px 14px;
+    border-radius: 100px;
+  }
+
+  .read-time::before {
+    content: '';
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    background: var(--lime);
+    border-radius: 50%;
+  }
+
+  /* MAIN CONTENT */
+  .content {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 0 24px 80px;
+  }
+
+  /* INTRO */
+  .intro-block {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--lime);
+    border-radius: 8px;
+    padding: 28px 32px;
+    margin-bottom: 48px;
+    font-size: 16px;
+    color: var(--text2);
+    line-height: 1.8;
+  }
+
+  .intro-block p + p { margin-top: 14px; }
+
+  /* SECTION HEADINGS */
+  .play-section {
+    margin-bottom: 52px;
+  }
+
+  .play-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    margin-bottom: 24px;
+  }
+
+  .play-number {
+    flex-shrink: 0;
+    width: 44px;
+    height: 44px;
+    background: rgba(216,236,106,0.1);
+    border: 1px solid rgba(216,236,106,0.25);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--lime);
+    margin-top: 4px;
+  }
+
+  .play-title-block {}
+
+  .play-icp {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text2);
+    margin-bottom: 4px;
+  }
+
+  .play-title {
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: var(--text);
+  }
+
+  .play-body {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .play-row {
+    padding: 20px 24px;
+    border-bottom: 1px solid var(--border);
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    gap: 16px;
+    align-items: start;
+  }
+
+  .play-row:last-child { border-bottom: none; }
+
+  .play-row-label {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text2);
+    padding-top: 2px;
+  }
+
+  .play-row-text {
+    font-size: 15px;
+    color: var(--text);
+    line-height: 1.7;
+  }
+
+  .play-row-text strong { color: var(--lime); font-weight: 600; }
+
+  /* OUTCOME TAGS */
+  .outcome-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 6px;
+  }
+
+  .outcome-tag {
+    background: rgba(91,111,255,0.12);
+    border: 1px solid rgba(91,111,255,0.25);
+    color: #a0a8ff;
+    font-size: 12px;
+    font-weight: 500;
+    padding: 4px 10px;
+    border-radius: 4px;
+  }
+
+  /* DIVIDER */
+  .divider {
+    border: none;
+    border-top: 1px solid var(--border);
+    margin: 48px 0;
+  }
+
+  /* SUMMARY SECTION */
+  .summary-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 32px;
+    margin-bottom: 48px;
+  }
+
+  .summary-card h2 {
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 20px;
+    color: var(--text);
+  }
+
+  .summary-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 16px;
+  }
+
+  .summary-cell {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 16px;
+  }
+
+  .summary-cell-title {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--lime);
+    margin-bottom: 8px;
+    letter-spacing: -0.01em;
+  }
+
+  .summary-cell-text {
+    font-size: 13px;
+    color: var(--text2);
+    line-height: 1.6;
+  }
+
+  /* CTA SECTION */
+  .cta-section {
+    background: linear-gradient(135deg, rgba(91,111,255,0.12) 0%, rgba(216,236,106,0.08) 100%);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 48px 40px;
+    text-align: center;
+  }
+
+  .cta-section h2 {
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 16px;
+    line-height: 1.3;
+  }
+
+  .cta-section h2 span { color: var(--lime); }
+
+  .cta-section p {
+    color: var(--text2);
+    font-size: 16px;
+    max-width: 480px;
+    margin: 0 auto 32px;
+    line-height: 1.7;
+  }
+
+  .cta-btn {
+    display: inline-block;
+    background: var(--lime);
+    color: #09090b;
+    font-weight: 700;
+    font-size: 15px;
+    padding: 14px 32px;
+    border-radius: 8px;
+    letter-spacing: -0.01em;
+    transition: background 0.15s, transform 0.15s;
+  }
+
+  .cta-btn:hover {
+    background: #c8dc5a;
+    text-decoration: none;
+    transform: translateY(-1px);
+  }
+
+  .cta-note {
+    margin-top: 14px;
+    font-size: 13px;
+    color: var(--text2);
+  }
+
+  /* FLOAT CTA */
+  #float-cta {
+    position: fixed;
+    bottom: 28px;
+    right: 28px;
+    background: var(--lime);
+    color: #09090b;
+    font-weight: 700;
+    font-size: 13px;
+    padding: 12px 20px;
+    border-radius: 8px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+    z-index: 99;
+    opacity: 0;
+    transform: translateY(12px);
+    transition: opacity 0.3s, transform 0.3s;
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  #float-cta.visible { opacity: 1; transform: translateY(0); }
+  #float-cta:hover { background: #c8dc5a; text-decoration: none; }
+
+  /* FOOTER */
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 24px;
+    text-align: center;
+    font-size: 13px;
+    color: var(--text2);
+  }
+
+  footer a { color: var(--text2); }
+  footer a:hover { color: var(--lime); }
+
+  /* RESPONSIVE */
+  @media (max-width: 600px) {
+    .play-row { grid-template-columns: 1fr; gap: 6px; }
+    .summary-row { grid-template-columns: 1fr; }
+    .cta-section { padding: 36px 24px; }
+    #float-cta { bottom: 16px; right: 16px; font-size: 12px; padding: 10px 16px; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="logo">Rally<span>Up</span></div>
+  <a href="https://pmfsurveyrallyup.vercel.app/" class="nav-cta">Get Free Diagnostic Call &rarr;</a>
+</nav>
+
+<div class="hero">
+  <div class="hero-badge">Free Framework</div>
+  <h1>Which Employee Content Play Is <span>Right for Your Company?</span></h1>
+  <p class="hero-sub">A 3-minute framework for B2B teams who want LinkedIn to actually drive business results.</p>
+  <div class="read-time">3 minute read</div>
+</div>
+
+<div class="content">
+
+  <div class="intro-block">
+    <p>Most employee advocacy programs fail for the same reason.</p>
+    <p>They hand employees pre-written copy, set up a Slack channel called #linkedin-posts, and wait. Two weeks later, nobody's posting. Six weeks later, the initiative is dead.</p>
+    <p>The problem isn't that employees don't want to build their presence. The problem is that the system puts all the effort on them and gives them nothing in return except the vague promise of "visibility."</p>
+    <p>The companies winning on LinkedIn right now aren't running campaigns. They're building systems that make it easy and genuinely rewarding for employees to show up as experts. And there are three distinct ways to do it, depending on what your company needs most.</p>
+  </div>
+
+  <!-- PLAY 1 -->
+  <div class="play-section">
+    <div class="play-header">
+      <div class="play-number">1</div>
+      <div class="play-title-block">
+        <div class="play-icp">For Founders, CEOs &amp; Senior Executives</div>
+        <div class="play-title">Brand Leadership</div>
+      </div>
+    </div>
+    <div class="play-body">
+      <div class="play-row">
+        <div class="play-row-label">The problem</div>
+        <div class="play-row-text">Your executive team has years of hard-earned expertise and relationships. But their LinkedIn hasn't been touched in months, or when they do post, it sounds like a press release. They know they should show up, but there's no time and no system.</div>
+      </div>
+      <div class="play-row">
+        <div class="play-row-label">What it looks like</div>
+        <div class="play-row-text">A structured monthly interview, <strong>15 minutes per person</strong>. We turn that conversation into 4-6 posts written in their voice, reviewed and approved by them, published on their schedule. They show up as genuine experts without the overhead of actually writing.</div>
+      </div>
+      <div class="play-row">
+        <div class="play-row-label">What happens</div>
+        <div class="play-row-text">
+          <div class="outcome-tags">
+            <span class="outcome-tag">Inbound from ideal customers</span>
+            <span class="outcome-tag">Speaking invitations</span>
+            <span class="outcome-tag">Investor credibility</span>
+            <span class="outcome-tag">Company brand halo effect</span>
+          </div>
+        </div>
+      </div>
+      <div class="play-row">
+        <div class="play-row-label">Best fit if</div>
+        <div class="play-row-text">Founders and C-suite leaders who know presence matters but haven't found a way to make it sustainable.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PLAY 2 -->
+  <div class="play-section">
+    <div class="play-header">
+      <div class="play-number">2</div>
+      <div class="play-title-block">
+        <div class="play-icp">For Marketing Managers, Comms Leads &amp; Brand Teams</div>
+        <div class="play-title">Brand Awareness</div>
+      </div>
+    </div>
+    <div class="play-body">
+      <div class="play-row">
+        <div class="play-row-label">The problem</div>
+        <div class="play-row-text">Your marketing team runs the company page and does a decent job. But no ad budget replicates the trust that 15 or 20 employees talking naturally about their work creates. The challenge isn't buy-in, it's bandwidth. Chasing that many people for content every week is unsustainable.</div>
+      </div>
+      <div class="play-row">
+        <div class="play-row-label">What it looks like</div>
+        <div class="play-row-text">We build and run a structured employee content program across your team. <strong>Interviews, writing personalized to each person's voice</strong>, an editorial process that keeps it on-brand, and a posting cadence that doesn't burn anyone out.</div>
+      </div>
+      <div class="play-row">
+        <div class="play-row-label">What happens</div>
+        <div class="play-row-text">
+          <div class="outcome-tags">
+            <span class="outcome-tag">Compound organic reach</span>
+            <span class="outcome-tag">Employees proud of their presence</span>
+            <span class="outcome-tag">Brand that feels human</span>
+            <span class="outcome-tag">Scales as the team grows</span>
+          </div>
+        </div>
+      </div>
+      <div class="play-row">
+        <div class="play-row-label">Best fit if</div>
+        <div class="play-row-text">Marketing teams who want their people active on LinkedIn but need someone to make it operationally possible.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PLAY 3 -->
+  <div class="play-section">
+    <div class="play-header">
+      <div class="play-number">3</div>
+      <div class="play-title-block">
+        <div class="play-icp">For Sales Leaders, VP Sales &amp; RevOps</div>
+        <div class="play-title">Lead Generation</div>
+      </div>
+    </div>
+    <div class="play-body">
+      <div class="play-row">
+        <div class="play-row-label">The problem</div>
+        <div class="play-row-text">Cold outreach is getting harder and reply rates keep falling. But an SDR with a warm, credible LinkedIn presence gets responses that a cold rep never will. The issue is most salespeople don't know how to build that presence, and they don't have time to figure it out while hitting quota.</div>
+      </div>
+      <div class="play-row">
+        <div class="play-row-label">What it looks like</div>
+        <div class="play-row-text">A <strong>content engine built specifically for your sales team</strong>. Posts that showcase expertise, create social proof, and warm up the exact accounts they're targeting before the first touch ever happens.</div>
+      </div>
+      <div class="play-row">
+        <div class="play-row-label">What happens</div>
+        <div class="play-row-text">
+          <div class="outcome-tags">
+            <span class="outcome-tag">Higher outbound reply rates</span>
+            <span class="outcome-tag">Prospects recognize reps before first call</span>
+            <span class="outcome-tag">Credible team, less effort</span>
+          </div>
+        </div>
+      </div>
+      <div class="play-row">
+        <div class="play-row-label">Best fit if</div>
+        <div class="play-row-text">Sales teams where LinkedIn is already part of the outreach motion but not delivering the results it should.</div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- SUMMARY -->
+  <div class="summary-card">
+    <h2>Quick comparison</h2>
+    <div class="summary-row">
+      <div class="summary-cell">
+        <div class="summary-cell-title">Brand Leadership</div>
+        <div class="summary-cell-text">1-5 executives. Monthly interview. Thought leadership content. Fast to monetize.</div>
+      </div>
+      <div class="summary-cell">
+        <div class="summary-cell-title">Brand Awareness</div>
+        <div class="summary-cell-text">10-30 employees. Team-wide program. Compound organic reach. Marketing-led.</div>
+      </div>
+      <div class="summary-cell">
+        <div class="summary-cell-title">Lead Generation</div>
+        <div class="summary-cell-text">SDR and sales teams. Pipeline-focused content. Warms outbound before first touch.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div class="cta-section">
+    <h2>Which play fits <span>your company</span> right now?</h2>
+    <p>Most teams feel the pull of one of these more than the others. It usually comes down to where the pain is sharpest. Answer 5 quick questions and we'll book a free 20-minute EGC Diagnostic call with you. We'll tell you exactly which play fits, what your quick wins look like, and what's in the way. No pitch at the end.</p>
+    <a href="https://pmfsurveyrallyup.vercel.app/" class="cta-btn">Take the 90-second survey &rarr;</a>
+    <p class="cta-note">Complete the survey and we'll personally reach out to book your free diagnostic call.</p>
+  </div>
+
+</div>
+
+<a href="https://pmfsurveyrallyup.vercel.app/" id="float-cta">Take the survey &rarr;</a>
+
+<footer>
+  Built by <a href="https://rallyup.team" target="_blank">RallyUp</a> &nbsp;&middot;&nbsp; <a href="https://rallyup.team" target="_blank">rallyup.team</a>
+</footer>
+
+<script>
+  const floatBtn = document.getElementById('float-cta');
+  window.addEventListener('scroll', () => {
+    const scrolled = window.scrollY / (document.body.scrollHeight - window.innerHeight);
+    if (scrolled > 0.45) floatBtn.classList.add('visible');
+    else floatBtn.classList.remove('visible');
+  });
+</script>
+
+</body>
+</html>
