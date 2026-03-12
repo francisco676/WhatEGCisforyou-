@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Which Employee Content Play Is Right for Your Company? | RallyUp</title>
+<!-- Microsoft Clarity -->
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "vua7pfx9pc");
+</script>
+<style>
+  :root {
+    --bg: #09090b; --surface: #18181b; --border: #3f3f46;
+    --text: #fafafa; --text2: #a1a1aa; --accent: #5B6FFF; --lime: #D8EC6A;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 16px; line-height: 1.6; }
+  a { color: var(--lime); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  nav {
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(9,9,11,0.92); backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    padding: 0 24px; height: 56px;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .logo { font-weight: 700; font-size: 18px; letter-spacing: -0.02em; color: var(--text); }
+  .logo span { color: var(--lime); }
+  .nav-cta { background: var(--lime); color: #09090b; font-weight: 600; font-size: 13px; padding: 8px 16px; border-radius: 6px; white-space: nowrap; }
+  .nav-cta:hover { background: #c8dc5a; text-decoration: none; }
+
+  .hero { max-width: 680px; margin: 0 auto; padding: 60px 24px 48px; text-align: center; }
+  .hero h1 { font-size: clamp(26px, 5vw, 44px); font-weight: 700; line-height: 1.15; letter-spacing: -0.03em; margin-bottom: 16px; }
+  .hero h1 span { color: var(--lime); }
+  .hero-sub { font-size: 17px; color: var(--text2); max-width: 480px; margin: 0 auto; line-height: 1.6; }
+
+  .content { max-width: 680px; margin: 0 auto; padding: 0 24px 80px; }
+
+  /* BRIDGE */
+  .plays-intro { margin-bottom: 36px; text-align: center; }
+  .plays-intro-label { font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--lime); margin-bottom: 10px; }
+  .plays-intro h2 { font-size: clamp(20px, 3vw, 26px); font-weight: 700; letter-spacing: -0.02em; line-height: 1.25; margin-bottom: 12px; color: var(--text); }
+  .plays-intro p { font-size: 15px; color: var(--text2); max-width: 520px; margin: 0 auto; line-height: 1.65; }
+  .plays-counter { display: flex; justify-content: center; gap: 12px; margin-top: 20px; flex-wrap: wrap; }
+  .plays-counter-item { display: flex; align-items: center; gap: 8px; background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 10px 16px; font-size: 13px; font-weight: 600; color: var(--text2); }
+  .plays-counter-item .num { width: 24px; height: 24px; background: rgba(216,236,106,0.12); border: 1px solid rgba(216,236,106,0.3); border-radius: 6px; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 700; color: var(--lime); flex-shrink: 0; }
+
+  /* PLAY CARDS */
+  .play-card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; margin-bottom: 24px; }
+  .play-card-header { padding: 20px 24px 16px; border-bottom: 1px solid var(--border); display: flex; align-items: center; gap: 16px; }
+  .play-number { flex-shrink: 0; width: 36px; height: 36px; background: rgba(216,236,106,0.1); border: 1px solid rgba(216,236,106,0.25); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 16px; font-weight: 700; color: var(--lime); }
+  .play-title { font-size: 18px; font-weight: 700; letter-spacing: -0.02em; color: var(--text); line-height: 1.2; }
+  .play-fit { font-size: 12px; color: var(--text2); margin-top: 3px; }
+  .play-fit strong { color: var(--lime); font-weight: 600; }
+
+  .play-card-body { display: grid; grid-template-columns: 1fr 1fr; }
+  .play-col { padding: 20px 24px; }
+  .play-col:first-child { border-right: 1px solid var(--border); }
+  .col-label { font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 12px; }
+  .col-label.problem { color: #f87171; }
+  .col-label.solution { color: var(--lime); }
+
+  .play-col ul { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px; }
+  .play-col ul li { font-size: 14px; color: var(--text2); line-height: 1.55; padding-left: 14px; position: relative; }
+  .play-col ul li::before { content: ''; position: absolute; left: 0; top: 8px; width: 5px; height: 5px; border-radius: 50%; background: var(--border); }
+  .play-col.solution-col ul li::before { background: var(--lime); }
+
+  .play-card-footer { padding: 14px 24px; border-top: 1px solid var(--border); display: flex; flex-wrap: wrap; gap: 8px; }
+  .outcome-tag { background: rgba(91,111,255,0.12); border: 1px solid rgba(91,111,255,0.25); color: #a0a8ff; font-size: 12px; font-weight: 500; padding: 4px 10px; border-radius: 4px; }
+
+  /* INLINE CTA */
+  .inline-cta { text-align: center; background: rgba(216,236,106,0.04); border: 1px solid rgba(216,236,106,0.15); border-radius: 12px; padding: 28px 24px 20px; margin-bottom: 36px; }
+  .inline-cta-question { font-size: 16px; font-weight: 700; letter-spacing: -0.01em; color: var(--text); margin-bottom: 14px; line-height: 1.35; }
+  .cta-btn { display: inline-block; background: var(--lime); color: #09090b; font-weight: 700; font-size: 15px; padding: 13px 28px; border-radius: 8px; letter-spacing: -0.01em; transition: background 0.15s, transform 0.15s; }
+  .cta-btn:hover { background: #c8dc5a; text-decoration: none; transform: translateY(-1px); }
+  .cta-note { margin-top: 8px; font-size: 13px; color: var(--text2); }
+  .more-plays-arrow { display: flex; align-items: center; justify-content: center; gap: 8px; margin-top: 16px; font-size: 12px; color: var(--text2); letter-spacing: 0.04em; }
+  .more-plays-divider { flex: 1; max-width: 60px; height: 1px; background: var(--border); }
+
+  /* BOTTOM CTA */
+  .cta-section { background: linear-gradient(135deg, rgba(91,111,255,0.1) 0%, rgba(216,236,106,0.07) 100%); border: 1px solid var(--border); border-radius: 12px; padding: 40px 32px; text-align: center; }
+  .cta-section h2 { font-size: 22px; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 10px; line-height: 1.3; }
+  .cta-section h2 span { color: var(--lime); }
+  .cta-section p { color: var(--text2); font-size: 15px; margin-bottom: 24px; }
+
+  #float-cta { position: fixed; bottom: 24px; right: 24px; background: var(--lime); color: #09090b; font-weight: 700; font-size: 13px; padding: 12px 20px; border-radius: 8px; box-shadow: 0 8px 32px rgba(0,0,0,0.4); z-index: 99; opacity: 0; transform: translateY(12px); transition: opacity 0.3s, transform 0.3s; cursor: pointer; text-decoration: none; }
+  #float-cta.visible { opacity: 1; transform: translateY(0); }
+  #float-cta:hover { background: #c8dc5a; text-decoration: none; }
+
+  footer { border-top: 1px solid var(--border); padding: 20px 24px; text-align: center; font-size: 13px; color: var(--text2); }
+  footer a { color: var(--text2); }
+  footer a:hover { color: var(--lime); }
+
+  @media (max-width: 600px) {
+    .play-card-body { grid-template-columns: 1fr; }
+    .play-col:first-child { border-right: none; border-bottom: 1px solid var(--border); }
+    .cta-section { padding: 28px 20px; }
+    #float-cta { bottom: 16px; right: 16px; font-size: 12px; padding: 10px 16px; }
+    .plays-counter { flex-direction: column; align-items: center; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="logo">Rally<span>Up</span></div>
+  <a href="https://pmfsurveyrallyup.vercel.app/" class="nav-cta">Run the free diagnosis &rarr;</a>
+</nav>
+
+<div class="hero">
+  <h1>Which Employee Content Play Is <span>Right for Your Company?</span></h1>
+
+</div>
+
+<div class="content">
+
+  <!-- SOCIAL PROOF -->
+  <div style="background:var(--surface);border:1px solid var(--border);border-left:3px solid var(--lime);border-radius:8px;padding:14px 20px;margin-bottom:36px;display:flex;align-items:center;gap:12px;">
+    <span style="font-size:18px;flex-shrink:0">👥</span>
+    <p style="font-size:14px;color:var(--text2);line-height:1.5;margin:0">We've spoken with <strong style="color:var(--text)">50+ CMOs and CROs</strong> running EGC programs. The ones winning on LinkedIn aren't posting more. They picked the right play. <strong style="color:var(--lime)">Most teams haven't.</strong></p>
+  </div>
+
+  <!-- BRIDGE: THE 3 PLAYS -->
+  <div class="plays-intro">
+    <div class="plays-intro-label">The 3 EGC Plays</div>
+    <h2>There are exactly 3 plays that work.<br>Here they are.</h2>
+
+    <div class="plays-counter">
+      <div class="plays-counter-item"><div class="num">1</div> Brand Leadership</div>
+      <div class="plays-counter-item"><div class="num">2</div> Brand Awareness</div>
+      <div class="plays-counter-item"><div class="num">3</div> Lead Generation</div>
+    </div>
+  </div>
+
+  <!-- PLAY 1 -->
+  <div class="play-card">
+    <div class="play-card-header">
+      <div class="play-number">1</div>
+      <div>
+        <div class="play-title">Brand Leadership</div>
+        <div class="play-fit"><strong>Best for:</strong> Founders, CEOs &amp; Senior Executives</div>
+      </div>
+    </div>
+    <div class="play-card-body">
+      <div class="play-col">
+        <div class="col-label problem">The problem</div>
+        <ul>
+          <li>Your exec's LinkedIn hasn't moved in months, and you both know it. It's always "next week."</li>
+          <li>When they do post, it reads like a press release. Nobody engages. It quietly dies.</li>
+          <li>There's no system, so it just doesn't happen. And the window to build authority keeps shrinking.</li>
+        </ul>
+      </div>
+      <div class="play-col solution-col">
+        <div class="col-label solution">What's in it for you</div>
+        <ul>
+          <li>Execs become recognized voices in their industry. People come to them, not the other way around.</li>
+          <li>Inbound from ideal customers who already trust them before the first call.</li>
+          <li>A LinkedIn presence that runs itself. No calendar weight. No blank page problem.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="play-card-footer">
+      <span class="outcome-tag">Inbound from ideal customers</span>
+      <span class="outcome-tag">Speaking invitations</span>
+      <span class="outcome-tag">Investor credibility</span>
+      <span class="outcome-tag">Brand halo effect</span>
+    </div>
+  </div>
+
+  <!-- INLINE CTA 1 -->
+  <div class="inline-cta">
+    <div class="inline-cta-question">Want to know if Brand Leadership is for you?</div>
+    <a href="https://pmfsurveyrallyup.vercel.app/" class="cta-btn">Run the free diagnosis &rarr;</a>
+    <p class="cta-note">2 minutes. We'll see if Brand Leadership is the right play for you.</p>
+    <div class="more-plays-arrow">
+      <div class="more-plays-divider"></div>
+      more plays below &darr;
+      <div class="more-plays-divider"></div>
+    </div>
+  </div>
+
+  <!-- PLAY 2 -->
+  <div class="play-card">
+    <div class="play-card-header">
+      <div class="play-number">2</div>
+      <div>
+        <div class="play-title">Brand Awareness</div>
+        <div class="play-fit"><strong>Best for:</strong> Marketing Managers, Comms Leads &amp; Brand Teams</div>
+      </div>
+    </div>
+    <div class="play-card-body">
+      <div class="play-col">
+        <div class="col-label problem">The problem</div>
+        <ul>
+          <li>You've done the kickoff. You've sent the Slack message. It lasted two weeks. Sound familiar?</li>
+          <li>Every single week you're chasing the same people. It's exhausting, and it shouldn't be your job.</li>
+          <li>It feels like a losing battle. You're tired of running a program that keeps dying on you.</li>
+        </ul>
+      </div>
+      <div class="play-col solution-col">
+        <div class="col-label solution">What's in it for you</div>
+        <ul>
+          <li>Your team posts consistently without being chased. The system handles it.</li>
+          <li>Organic reach that compounds month over month. A brand that grows without paid budget.</li>
+          <li>A company that feels human online. Not another faceless corporate account.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="play-card-footer">
+      <span class="outcome-tag">Compound organic reach</span>
+      <span class="outcome-tag">Brand that feels human</span>
+      <span class="outcome-tag">Employees proud of their profile</span>
+      <span class="outcome-tag">Scales with the team</span>
+    </div>
+  </div>
+
+  <!-- INLINE CTA 2 -->
+  <div class="inline-cta">
+    <div class="inline-cta-question">Want to know if Brand Awareness is for you?</div>
+    <a href="https://pmfsurveyrallyup.vercel.app/" class="cta-btn">Run the free diagnosis &rarr;</a>
+    <p class="cta-note">2 minutes. We'll see if Brand Awareness is the right play for you.</p>
+    <div class="more-plays-arrow">
+      <div class="more-plays-divider"></div>
+      more plays below &darr;
+      <div class="more-plays-divider"></div>
+    </div>
+  </div>
+
+  <!-- PLAY 3 -->
+  <div class="play-card">
+    <div class="play-card-header">
+      <div class="play-number">3</div>
+      <div>
+        <div class="play-title">Lead Generation</div>
+        <div class="play-fit"><strong>Best for:</strong> Sales Leaders, VP Sales &amp; RevOps</div>
+      </div>
+    </div>
+    <div class="play-card-body">
+      <div class="play-col">
+        <div class="col-label problem">The problem</div>
+        <ul>
+          <li>Your reps are putting in the work. The cold emails go out. The reply rates just keep falling.</li>
+          <li>Prospects look up your rep before they respond. What they find is a blank profile. Deal over.</li>
+          <li>It's demoralizing. Good reps losing deals before the first conversation, just because they're invisible online.</li>
+        </ul>
+      </div>
+      <div class="play-col solution-col">
+        <div class="col-label solution">What's in it for you</div>
+        <ul>
+          <li>Prospects recognize your reps before the first touch. The conversation starts warm, not cold.</li>
+          <li>Reply rates climb. Outreach lands differently when the sender has presence and credibility.</li>
+          <li>Pipeline that builds in the background while your reps are closing.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="play-card-footer">
+      <span class="outcome-tag">Higher reply rates</span>
+      <span class="outcome-tag">Warm outbound pipeline</span>
+      <span class="outcome-tag">Credible team, less effort</span>
+    </div>
+  </div>
+
+  <!-- INLINE CTA 3 -->
+  <div class="inline-cta">
+    <div class="inline-cta-question">Want to know if Lead Generation is for you?</div>
+    <a href="https://pmfsurveyrallyup.vercel.app/" class="cta-btn">Run the free diagnosis &rarr;</a>
+    <p class="cta-note">2 minutes. We'll see if Lead Generation is the right play for you.</p>
+  </div>
+
+  <!-- BOTTOM CTA -->
+  <div class="cta-section">
+    <h2>Want to know the <span>exact EGC play</span> you need to run?</h2>
+    <p>Answer 5 quick questions. Get a free personalized diagnosis and walk away knowing exactly what to do next.</p>
+    <a href="https://pmfsurveyrallyup.vercel.app/" class="cta-btn">Run the diagnosis now &rarr;</a>
+    <p class="cta-note" style="margin-top:10px;">No pitch. Just clarity on which play fits and what's in the way.</p>
+  </div>
+
+</div>
+
+<a href="https://pmfsurveyrallyup.vercel.app/" id="float-cta">Run the free diagnosis &rarr;</a>
+
+<footer>
+  Built by <a href="https://rallyup.team" target="_blank">RallyUp</a> &nbsp;&middot;&nbsp; <a href="https://rallyup.team" target="_blank">rallyup.team</a>
+</footer>
+
+<script>
+  const floatBtn = document.getElementById('float-cta');
+  window.addEventListener('scroll', () => {
+    const scrolled = window.scrollY / (document.body.scrollHeight - window.innerHeight);
+    if (scrolled > 0.3) floatBtn.classList.add('visible');
+    else floatBtn.classList.remove('visible');
+  });
+
+  (function() {
+    const params = new URLSearchParams(window.location.search);
+    const utmKeys = ['utm_source', 'utm_medium', 'utm_campaign'];
+    const hasUtm = utmKeys.some(k => params.has(k));
+    if (!hasUtm) return;
+    const surveyBase = 'https://pmfsurveyrallyup.vercel.app/';
+    document.querySelectorAll('a[href*="pmfsurveyrallyup"]').forEach(a => {
+      a.href = surveyBase + '?' + params.toString();
+    });
+  })();
+</script>
+</body>
+</html>
